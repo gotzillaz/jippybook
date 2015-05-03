@@ -41,6 +41,10 @@ Rails.application.routes.draw do
     post '/' => 'search#search'
   end
 
+  namespace :category do
+    get '/:cat_name' => 'category#show'
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
