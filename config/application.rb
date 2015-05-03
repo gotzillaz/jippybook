@@ -8,6 +8,12 @@ Bundler.require(*Rails.groups)
 
 module Jippybook
   class Application < Rails::Application
+    config.assets.enabled = true
+    #config.assets.path << "#(Rails.root)/app/assets/fonts"
+    config.time_zone = 'Bangkok'
+    config.encoding = 'utf-8'
+    config.assets.precompile += [/.*\.js/,/.*\.css/]
+    config.active_support.escape_html_entities_in_json = true
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -21,6 +27,6 @@ module Jippybook
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
-    config.active_record.raise_in_transactional_callbacks = true
+    #config.active_record.raise_in_transactional_callbacks = true
   end
 end
