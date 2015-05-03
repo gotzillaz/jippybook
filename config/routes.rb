@@ -45,6 +45,11 @@ Rails.application.routes.draw do
     get '/:cat_name' => 'category#show'
   end
 
+  namespace :book do
+    get '/:id' => 'book#getbook'
+    post '/:id/add' => 'book#add_to_cart'
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
