@@ -37,6 +37,10 @@ Rails.application.routes.draw do
     post '/' => 'login#check'
   end
 
+  namespace :search do
+    post '/' => 'search#search'
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
