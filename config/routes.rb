@@ -26,6 +26,12 @@ Rails.application.routes.draw do
     post '/submit' => 'user#submit'
   end
 
+  namespace :register do
+    get '/' => 'register#index'
+    post '/' => 'register#create'
+    get '/success' => 'register#success'
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
