@@ -32,6 +32,11 @@ Rails.application.routes.draw do
     get '/success' => 'register#success'
   end
 
+  namespace :login do
+    get '/' => 'login#index'
+    post '/' => 'login#check'
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
