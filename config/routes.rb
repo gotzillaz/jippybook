@@ -1,9 +1,18 @@
 Rails.application.routes.draw do
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'home#index'
+  namespace :admin do
+  #     # Directs /admin/products/* to Admin::ProductsController
+  #     # (app/controllers/admin/products_controller.rb)
+    get '/' => 'admin#index'
+    resources :inventory
+    resources :member
+    resources :order
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
