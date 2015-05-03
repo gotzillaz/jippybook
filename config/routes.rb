@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'home#index'
+
   namespace :admin do
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
@@ -12,6 +13,17 @@ Rails.application.routes.draw do
     resources :inventory
     resources :member
     resources :order
+  end
+
+  namespace :user do
+    get '/' => 'user#index'
+    post '/profile' => 'user#profile'
+    post '/order' => 'user#order'
+
+    get '/cart' => 'user#cart'
+    delete '/cart/:id(.:format)' => 'user#cart_destroy'
+    get '/payment' => 'user#payment'
+    post '/submit' => 'user#submit'
   end
 
   # Example of regular route:
