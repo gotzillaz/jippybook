@@ -1,2 +1,2 @@
-module Register::RegisterHelper
+module Register::RegisterHelper 
 end
