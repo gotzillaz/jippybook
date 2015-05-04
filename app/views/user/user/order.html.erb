@@ -1,0 +1,51 @@
+
+<% content_for :head do %>
+  <title>Order | JippyBook</title>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <div class='parallax-container'>
+      <div class='parallax'>
+        <img src='https://d13yacurqjgara.cloudfront.net/users/501233/screenshots/1833854/attachments/305595/bookstore2.jpg'>
+      </div>
+    </div>
+    <div class='section'>
+      <div class='card-section white'>
+        <h4>Order</h4>
+        <table class='center'>
+          <thead>
+            <tr>
+              <th data-field='id'>Name</th>
+              <th data-field='name'>Item Name</th>
+              <th data-field='price'>Item Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Alvin</td>
+              <td>Eclair</td>
+              <td>$0.87</td>
+            </tr>
+            <tr>
+              <td>Alan</td>
+              <td>Jellybean</td>
+              <td>$3.76</td>
+            </tr>
+            <tr>
+              <td>Jonathan</td>
+              <td>Lollipop</td>
+              <td>$7.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    $(function () {
+      $('.parallax').parallax();
+    });
+  </script>
+<% end %>

@@ -9,6 +9,11 @@ h4 {
   margin-top: 1em;
 }
 
+td,
+th {
+  text-align: inherit;
+}
+
 nav {
   height: auto;
 }
