@@ -4,12 +4,12 @@ one:
   category_id: 1
   name: MyText
   description: MyText
-  img: 
-  price: 
+  img: xxx
+  price: 10
 
 two:
   category_id: 1
   name: MyText
   description: MyText
-  img: 
-  price: 
+  img: xxx
+  price: 10

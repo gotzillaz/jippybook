@@ -4,10 +4,10 @@ one:
   user_id: 1
   order_id: 1
   description: MyText
-  img: 
+  img: xx
 
 two:
   user_id: 1
   order_id: 1
   description: MyText
-  img: 
+  img: xx
