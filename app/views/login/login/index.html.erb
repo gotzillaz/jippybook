@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <%= stylesheet_link_tag 'materialize.min.css' %>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css'>
-  </head>
-  <body ng-app='auth'>
+
+<% content_for :head do %>
+  <title>Login | JippyBook</title>
+<% end %>
+
+<% content_for :body do %>
+  <div ng-app='activity'>
     <section ng-controller='loginController'>
       <form name='form' ng-submit='submit(form)' ng-init='action="/authen"' novalidate>
         <input name='username' type='username' ng-model='input.username' required>
@@ -12,6 +12,5 @@
         <input type='submit' value='Login'>
       </form>
     </section>
-    <%= javascript_include_tag 'jquery.js', 'angular.min.js', 'auth.js', 'materialize.min.js' %>
-  </body>
-</html>
+  </div>
+<% end %>
