@@ -26,15 +26,15 @@ Rails.application.routes.draw do
     post '/submit' => 'user#submit'
   end
 
-  namespace :register do
-    get '/' => 'register#index'
-    post '/' => 'register#create'
-    get '/success' => 'register#success'
+  namespace :registration do
+    get '/' => 'registration#index'
+    post '/' => 'registration#create'
+    get '/success' => 'registration#success'
   end
 
   namespace :login do
     get '/' => 'login#index'
-    post '/' => 'login#check'
+    post '/' => 'login#authenticate'
   end
 
   namespace :search do
