@@ -1,0 +1,51 @@
+<nav>
+  <div class='scroll-nav light-green'>
+    <div class='nav-wrapper'>
+      <a href='' class='brand-logo'>JippyBook</a>
+      <div class='hide-on-large-only'>
+        <a data-activates='drawer-nav' class='drawer-collapse'><i class='mdi-navigation-menu'></i></a>
+      </div>
+      <ul id='nav-mobile' class='right hide-on-med-and-down'>
+        <li><a href=''>Home</a></li>
+        <li>
+          <a data-activates='category-dropdown' class='dropdown-button'>Category</a>
+          <ul id='category-dropdown' class='dropdown-content'>
+            <li><a href=''>Fantasy</a></li>
+            <li><a href=''>Crime</a></li>
+            <li><a href=''>Action</a></li>
+          </ul>
+        </li>
+        <li><a data-activates='drawer-nav' class='drawer-collapse'>Profile</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class='sub-nav light-green lighten-5 light-green-text caught'>
+    <div class='input-field center'>
+      <i class='mdi-action-search prefix light-green-text'></i>
+      <input type='text' placeholder='Find your books now!'>
+    </div>
+  </div>
+  <ul id='drawer-nav' class='side-nav'>
+    <li class='avatar'><a href=''><img src='http://goo.gl/35SOvU'></a></li>
+    <li><a href=''>Home</a></li>
+    <li>
+      <a data-activates='category-side-dropdown' class='dropdown-button'>Category</a>
+      <ul id='category-side-dropdown' class='dropdown-content'>
+        <li><a href=''>Fantasy</a></li>
+        <li><a href=''>Crime</a></li>
+        <li><a href=''>Action</a></li>
+      </ul>
+    </li>
+    <li><a href=''>Profile</a></li>
+    <li><a href=''>Order</a></li>
+  </ul>
+</nav>
+
+<script>
+  $(function () {
+    $('.caught').caught();
+    $('.drawer-collapse').sideNav({
+      menuWidth: 260
+    });
+  });
+</script>

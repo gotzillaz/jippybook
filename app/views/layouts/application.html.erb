@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%= yield :head %>
     <%= stylesheet_link_tag 'materialize.min.css', 'style.css' %>
+    <%= yield :head %>
   </head>
   <body>
-  <%= yield :body %>
-  <%= javascript_include_tag 'jquery.js', 'angular.min.js', 'materialize.min.js', 'activity.js', 'auth.js' %>
+    <%= javascript_include_tag 'jquery.js', 'materialize.min.js', 'script.js' %>
+    <%= render template: '/layouts/nav' %>
+    <%= yield :body %>
   </body>
 </html>
