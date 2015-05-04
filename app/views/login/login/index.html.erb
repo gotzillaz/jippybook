@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%= stylesheet_link_tag '' %>
+    <%= stylesheet_link_tag 'materialize.min.css' %>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css'>
   </head>
   <body ng-app='auth'>
@@ -12,7 +12,6 @@
         <input type='submit' value='Login'>
       </form>
     </section>
-    <%= javascript_include_tag 'jquery.js', 'angular.min.js', 'auth.js' %>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js'></script>
+    <%= javascript_include_tag 'jquery.js', 'angular.min.js', 'auth.js', 'materialize.min.js' %>
   </body>
 </html>
