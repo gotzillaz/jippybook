@@ -17,8 +17,7 @@ Rails.application.routes.draw do
 
   namespace :user do
     get '/' => 'user#index'
-    post '/profile' => 'user#profile'
-    post '/order' => 'user#order'
+    get '/order' => 'user#order'
 
     get '/cart' => 'user#cart'
     delete '/cart/:id(.:format)' => 'user#cart_destroy'
