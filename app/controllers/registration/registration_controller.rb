@@ -1,2 +1,4 @@
-class Register::RegisterController < ApplicationController
+class Registration::RegistrationController < ApplicationController
+  def index
+  end
 end
