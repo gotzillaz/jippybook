@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150504152038) do
+ActiveRecord::Schema.define(version: 20150504163814) do
 
   create_table "addresses", force: :cascade do |t|
     t.text     "address",    null: false
@@ -33,10 +33,52 @@ ActiveRecord::Schema.define(version: 20150504152038) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "cart_users", force: :cascade do |t|
+    t.integer  "user_id",    null: false
+    t.integer  "book_id",    null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "categories", force: :cascade do |t|
     t.text     "name",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "order_details", force: :cascade do |t|
+    t.integer  "order_id",   null: false
+    t.integer  "book_id",    null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer  "user_id",           null: false
+    t.integer  "payment_method_id", null: false
+    t.float    "price",             null: false
+    t.integer  "count",             null: false
+    t.datetime "order_date",        null: false
+    t.datetime "target_date",       null: false
+    t.text     "status",            null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  create_table "payment_methods", force: :cascade do |t|
+    t.text     "name",        null: false
+    t.text     "description", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "payments", force: :cascade do |t|
+    t.integer  "user_id",     null: false
+    t.integer  "order_id",    null: false
+    t.text     "description", null: false
+    t.binary   "img",         null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "reviews", force: :cascade do |t|
