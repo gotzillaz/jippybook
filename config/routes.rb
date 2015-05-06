@@ -39,11 +39,11 @@ Rails.application.routes.draw do
   end
 
   namespace :search do
-    post '/' => 'search#search'
+    get '/:query' => 'search#index'
   end
 
   namespace :category do
-    get '/:cat_name' => 'category#show'
+    get '/:cat_name' => 'category#index'
   end
 
   namespace :book do
