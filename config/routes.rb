@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     resources :inventory
     resources :member
     resources :order
+    resources :category
   end
 
   namespace :user do
@@ -23,6 +24,8 @@ Rails.application.routes.draw do
     delete '/cart/:id(.:format)' => 'user#cart_destroy'
     get '/payment' => 'user#payment'
     post '/submit' => 'user#submit'
+    get '/edit' => 'user#edit'
+    post '/edit' => 'user#edit_submit'
   end
 
   namespace :registration do
