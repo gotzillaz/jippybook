@@ -1,0 +1,83 @@
+
+<% content_for :head do %>
+  <title>Cart | JippyBook</title>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <div class='parallax-container'>
+      <div class='parallax'>
+        <img src='https://d13yacurqjgara.cloudfront.net/users/501233/screenshots/1833854/attachments/305595/bookstore2.jpg'>
+      </div>
+    </div>
+    <div class='page-container'>
+      <div class='card-section white'>
+        <h4>Cart</h4>
+        <ul class='collection'>
+          <li class='collection-item'>
+            <div class='row'>
+              <img class='col m4 s12' src='http://materializecss.com/images/office.jpg'>
+              <div class='col m6 s8'>
+                <h5>Title</h5>
+                <p>Description</p>
+              </div>
+              <div class='col m2 s4'>
+                <h5 class='red-text right-align'>$250</h5>
+              </div>
+            </div>
+          </li>
+          <li class='collection-item'>
+            <div class='row'>
+              <img class='col m4 s12' src='http://materializecss.com/images/office.jpg'>
+              <div class='col m6 s8'>
+                <h5>Title</h5>
+                <p>Description</p>
+              </div>
+              <div class='col m2 s4'>
+                <h5 class='red-text right-align'>$250</h5>
+              </div>
+            </div>
+          </li>
+          <li class='collection-item'>
+            <div class='row'>
+              <img class='col m4 s12' src='http://materializecss.com/images/office.jpg'>
+              <div class='col m6 s8'>
+                <h5>Title</h5>
+                <p>Description</p>
+              </div>
+              <div class='col m2 s4'>
+                <h5 class='red-text right-align'>$250</h5>
+              </div>
+            </div>
+          </li>
+          <li class='collection-item'>
+            <div class='row'>
+              <img class='col m4 s12' src='http://materializecss.com/images/office.jpg'>
+              <div class='col m6 s8'>
+                <h5>Title</h5>
+                <p>Description</p>
+              </div>
+              <div class='col m2 s4'>
+                <h5 class='red-text right-align'>$250</h5>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class='row'>
+          <div class='col m8 s8 right-align'>
+            Total <h5 class='red-text'>$1000</h5>
+          </div>
+          <div class='col m4 s8'>
+            <a class='right waves-effect waves-light btn'>Check Out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    $(function () {
+      $('.parallax').parallax();
+    });
+  </script>
+<% end %>
