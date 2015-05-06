@@ -24,8 +24,7 @@ Rails.application.routes.draw do
     delete '/cart/:id(.:format)' => 'user#cart_destroy'
     get '/payment' => 'user#payment'
     post '/submit' => 'user#submit'
-    get '/edit' => 'user#edit'
-    post '/edit' => 'user#edit_submit'
+    resources :address 
   end
 
   namespace :registration do
