@@ -1,0 +1,74 @@
+
+<% content_for :head do %>
+  <title>Admin: Order Detail| JippyBook</title>
+<% end %>
+
+<% content_for :body do %>
+<section>
+	<div class='page-container'>
+		<div class="row">
+			<div class="col m10 offset-m2">
+				<h4>Order: #112</h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col m2">
+				<%= render template: '/admin/nav' %>
+			</div>
+			<div class="col m10">
+
+				<div class="row">
+					<div class="col m6">
+						<h4>Report</h4>
+						<table class="bordered">
+					        <thead>
+						        <tr>
+						            <th width="5%;">Id</th>
+						            <th width="60%">Description</th>
+						            <th width="35%">IMG</th>
+						        </tr>
+					        </thead>
+					        <tbody>
+					          <tr>
+					            <td class="center">1</td>
+					            <td class="center">Test Data</td>
+					            <td class="center"><a href='#'>Load Image</a></td>
+					          </tr>
+					        </tbody>
+					    </table>
+					</div>
+					<div class="col m6">
+					    <h4>Cart Detail</h4>
+					    <table class="bordered">
+					        <thead>
+						        <tr>
+						        	<th width="10%"></th>
+						            <th width="5%">Id</th>
+						            <th width="10%">Category</th>
+						            <th width="65%">Name</th>	            
+						            <th width="10%">Price(Bath)</th>
+						        </tr>
+					        </thead>
+					        <tbody>
+					          <tr>
+					            <td><img class="responsive-img" src='http://img1.wikia.nocookie.net/__cb20070927074347/harrypotter/images/1/15/Hp7.jpg'></td>
+					            <td class="center">1</td>
+					            <td class="center">Novel</td>
+					            <td class="center">Harry Potter</td>
+					            <td class="center">5000</td>
+					          </tr>
+					          <tr>
+					            <td colspan="3">
+					            <td class="right"><b>Total</b></td>
+					            <td class="center"><b>5000</b></td>
+					          </tr>
+					        </tbody>
+					    </table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<% end %>

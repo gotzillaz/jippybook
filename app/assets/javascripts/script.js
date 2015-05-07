@@ -4,6 +4,9 @@
 
   $.fn.extend({
     caught: function () {
+      if (this.length === 0) {
+        return false;
+      }
       var element  = this,
           position = element.position().top;
       $(window).scroll(function () {
