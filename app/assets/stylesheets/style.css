@@ -9,8 +9,7 @@ h4 {
   margin-top: 1em;
 }
 
-td,
-th {
+td, th {
   text-align: inherit;
 }
 
@@ -26,7 +25,12 @@ footer.page-footer {
   margin-top: 0;
 }
 
+i.small {
+  font-size: 1.5rem;
+}
+
 .btn {
+  margin: 8px;
   background-color: #8bc34a;
 }
 
@@ -42,6 +46,10 @@ footer.page-footer {
 
 .brand-logo {
   font-weight: 300;
+}
+
+.dropdown-content {
+  z-index: 5;
 }
 
 .input-field .prefix ~ input {
@@ -78,6 +86,14 @@ footer.page-footer {
 
 .collection .collection-item .row {
   margin-bottom: 0;
+}
+
+.collapsible-header i.right {
+  margin-right: 0;
+}
+
+.collapsible.no-shadow {
+  box-shadow: none;
 }
 
 /* scroll-nav */
@@ -147,7 +163,7 @@ footer.page-footer {
 .card-section {
   display: block;
   box-sizing: border-box;
-  max-width: 640px;
+  max-width: 720px;
   margin: auto;
   padding-left: 16px;
   padding-right: 16px;
