@@ -13,26 +13,32 @@
     <div class='page-container'>
       <div class='card-section white'>
         <h4>Login</h4>
-        <form action='/login' method='post'>
+        <% if logged_in? %>
+            <h1>i<%= current_user.username %>i</h1>
+        <% else %>
+            <h1> gg </h1>
+        <% end %>
+        <%= form_for(:user, url: '/login') do |f| %>
+        <!--form action='/login' method='post' id='login_form'-->
           <div class='row'>
             <div class='col m12 input-field'>
-              <input id='username' type='text' class='validate'>
+              <input id='username' type='text' class='validate' name='user[username]'>
               <label for='username'>Username</label>
             </div>
           </div>
           <div class='row'>
             <div class='col m12 input-field'>
-              <input id='password' type='password' class='validate'>
+              <input id='password' type='password' class='validate' name='user[password]'>
               <label for='password'>Password</label>
             </div>
           </div>
           <div class='row'>
             <div class='col m12 input-field'>
-              <a class='right waves-effect waves-light btn'>Login</a>
+              <button class='right waves-effect waves-light btn'>Login</button> 
               <a class='right waves-effect waves-light btn'>SignUp</a>
             </div>
           </div>
-        </form>
+        <% end %>
       </div>
     </div>
   </section>

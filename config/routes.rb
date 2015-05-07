@@ -22,8 +22,8 @@ Rails.application.routes.draw do
     get '/order' => 'user#order'
     get '/cart' => 'user#cart'
     delete '/cart/:id(.:format)' => 'user#cart_destroy'
-    get '/payment' => 'user#payment'
     get '/report' => 'user#report'
+    get '/payment' => 'payment#payment'
     post '/payment/success' => 'user#submit_success'
     get '/payment/success' => 'user#payment_success'
     resources :address 
@@ -35,10 +35,15 @@ Rails.application.routes.draw do
     get '/success' => 'registration#success'
   end
 
+
   namespace :login do
-    get '/' => 'login#index'
-    post '/' => 'login#authenticate'
+    get '/z' => 'login#index'
+    post '/z' => 'login#authenticate'
   end
+
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  delete '/logout' => 'sessions#logout'
 
   namespace :search do
     get '/:query' => 'search#index'
