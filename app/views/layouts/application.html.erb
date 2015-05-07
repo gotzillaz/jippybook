@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%= stylesheet_link_tag 'materialize.min.css','style.css' %>
+    <%= stylesheet_link_tag 'materialize.min.css', 'style.css' %>
     <%= yield :head %>
   </head>
   <body>
     <%= javascript_include_tag 'jquery.js', 'materialize.min.js', 'script.js' %>
-    
     <%= render template: '/layouts/nav' %>
-
     <%= yield :body %>
     <%= render template: '/layouts/foot' %>
   </body>
