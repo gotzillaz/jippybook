@@ -96,6 +96,11 @@ i.small {
   box-shadow: none;
 }
 
+.file-field label.file-path {
+  margin-left: 100px;
+  width: calc(100% - 100px);
+}
+
 /* scroll-nav */
 
 .scroll-nav {
