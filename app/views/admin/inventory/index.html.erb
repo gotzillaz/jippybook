@@ -1,0 +1,52 @@
+
+<% content_for :head do %>
+  <title>Admin | JippyBook</title>
+<% end %>
+
+<% content_for :body do %>
+<section>
+	<div class='page-container'>
+		<div class="row">
+			<div class="col m10 offset-m2">
+				<h4>Book Inventory</h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col m2">
+				<div class="collection" style="text-align:center;">
+			      <a href="#!" class="collection-item">Dashboard</a>
+			      <a href="#!" class="collection-item">Category</a>
+			      <a href="#!" class="collection-item active">Book Inventory</a>
+			      <a href="#!" class="collection-item">Member</a>
+			      <a href="#!" class="collection-item">Order</a>
+			    </div>
+			</div>
+			<div class="col m10">
+				<table class="bordered">
+			        <thead>
+				        <tr>
+				        	<th width="10%;"></th>
+				            <th width="5%;">Id</th>
+				            <th width="10%;">Category</th>
+				            <th width="10%;">Name</th>
+				            <th width="55%;">Description</th>	            
+				            <th width="10%;">Price(Bath)</th>
+				        </tr>
+			        </thead>
+			        <tbody>
+			          <tr>
+			            <td><img class="responsive-img" src='http://img1.wikia.nocookie.net/__cb20070927074347/harrypotter/images/1/15/Hp7.jpg'></td>
+			            <td class="center">1</td>
+			            <td class="center">Novel</td>
+			            <td class="center">Harry Potter</td>
+			            <td>The novel about sex</td>
+			            <td class="center">5000</td>
+			          </tr>
+			        </tbody>
+			    </table>
+			</div>
+		</div>
+	</div>
+</section>
+
+<% end %>
