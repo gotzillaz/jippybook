@@ -23,7 +23,8 @@ Rails.application.routes.draw do
     get '/cart' => 'user#cart'
     delete '/cart/:id(.:format)' => 'user#cart_destroy'
     get '/payment' => 'user#payment'
-    post '/payment/submit' => 'user#submit'
+    get '/report' => 'user#report'
+    post '/payment/success' => 'user#submit_success'
     get '/payment/success' => 'user#payment_success'
     resources :address 
   end
