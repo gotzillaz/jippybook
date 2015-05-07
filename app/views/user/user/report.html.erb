@@ -1,0 +1,54 @@
+
+<% content_for :head do %>
+  <title>Report | JippyBook</title>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <div class='parallax-container'>
+      <div class='parallax'>
+        <img src='https://d13yacurqjgara.cloudfront.net/users/501233/screenshots/1833854/attachments/305595/bookstore2.jpg'>
+      </div>
+    </div>
+    <div class='page-container'>
+      <div class='card-section white'>
+        <h4>Report</h4>
+        <form action='/login' method='post'>
+          <div class='row'>
+            <div class='col m12 s12 input-field'>
+              <input id='orderid' type='text' class='validate'>
+              <label for='orderid'>Order ID</label>
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col m12 s12 file-field input-field'>
+              <textarea id='address' class='materialize-textarea'></textarea>
+              <label for='address'>Note</label>
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col m12 s12 file-field input-field'>
+              <label for='file-path' class='file-path'>Payment Slip</label>
+              <input id='file-path' type='text' class='file-path validate'>
+              <div class='btn'>
+                <span>File</span>
+                <input name='slip' type='file'>
+              </div>
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col m12 s12 input-field'>
+              <a class='right waves-effect waves-light btn'>Submit</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    $(function () {
+      $('.parallax').parallax();
+    });
+  </script>
+<% end %>

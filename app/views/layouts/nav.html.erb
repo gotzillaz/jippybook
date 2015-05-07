@@ -25,20 +25,9 @@
       <input type='text' placeholder='Find your books now!'>
     </div>
   </div>
-  <ul id='drawer-nav' class='side-nav'>
-    <li class='avatar'><a href=''><img src='http://goo.gl/35SOvU'></a></li>
-    <li class='hide-on-large-only'><a href=''>Home</a></li>
-    <li class='hide-on-large-only'>
-      <a data-activates='category-side-dropdown' class='dropdown-button'>Category</a>
-      <ul id='category-side-dropdown' class='dropdown-content'>
-        <li><a href=''>Fantasy</a></li>
-        <li><a href=''>Crime</a></li>
-        <li><a href=''>Action</a></li>
-      </ul>
-    </li>
-    <li><a href=''>Profile</a></li>
-    <li><a href=''>Order</a></li>
-  </ul>
+  
+  <%= render template: '/layouts/drawer' %>
+
 </nav>
 
 <script>

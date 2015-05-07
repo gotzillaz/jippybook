@@ -1,0 +1,77 @@
+
+<% content_for :head do %>
+  <title>Admin: New inventory | JippyBook</title>
+<% end %>
+
+<% content_for :body do %>
+<section>
+	<div class='page-container'>
+		<div class="row">
+			<div class="col m9 offset-m3">
+				<h4>Add New Book to Inventory</h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col m2">
+				<%= render template: '/admin/nav' %>
+			</div>
+			<div class="col m7 offset-m1">
+				<form action='#' class="col m12">
+
+					<div class="row">
+				        <div class="input-field col m12">
+				          <input placeholder="" id="book_name" type="text" class="validate">
+				          <label for="book_name">Book Name</label>
+				        </div>
+				    </div>
+
+				    <div class="file-field input-field">
+				      <input class="file-path validate" id="book_cover" type="text" readonly />
+				      <label class="file-path" for="book_cover">Book Cover Image</label>
+
+				      <div class="btn">
+				        <span>FILE</span>
+				        <input type="file" />
+				      </div>
+				    </div>
+
+					<div class="row">
+		               <div class="input-field col m12">
+					    <select>
+					      <option value="" disabled selected>Choose book's category</option>
+					      <option value="1">Option 1</option>
+					      <option value="2">Option 2</option>
+					      <option value="3">Option 3</option>
+					    </select>
+					    <label>Category</label>
+					  </div>
+		            </div>
+
+				    <div class="row">
+				        <div class="input-field col m12">
+				          <textarea id="description" class="materialize-textarea"></textarea>
+				          <label for="description">Description</label>
+				        </div>
+				    </div>
+
+				    <div class="row">
+				        <div class="input-field col m12">
+				          <input placeholder="" id="price" type="text" class="validate">
+				          <label for="price">Price</label>
+				        </div>
+				    </div>
+
+				    <button class="btn" name="">Create</button>        
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<script type="text/javascript">
+	$(document).ready(function() {
+	    $('select').material_select();
+	 });
+</script>
+<% end %>

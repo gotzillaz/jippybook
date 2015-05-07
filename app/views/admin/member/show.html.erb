@@ -1,0 +1,51 @@
+
+<% content_for :head do %>
+  <title>Admin: User Address | JippyBook</title>
+<% end %>
+
+<% content_for :body do %>
+<section>
+	<div class='page-container'>
+		<div class="row">
+			<div class="col m10 offset-m2">
+				<h4>User Address: mike_paniwan</h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col m2">
+				<%= render template: '/admin/nav' %>
+			</div>
+			<div class="col m10">
+				<table class="bordered">
+			        <thead>
+				        <tr>
+				            <th width="5%">Id</th>
+				            <th width="20%">Fullname</th>
+				            <th width="35%">Address</th>	            
+				            <th width="10%">District</th>
+				            <th width="10%">Province</th>
+				            <th width="5%">Zipcode</th>
+				            <th width="10%"></th>
+				        </tr>
+			        </thead>
+			        <tbody>
+			          <tr>
+			            <td class="center">1</td>
+			            <td class="center">Tanitphon Paniwan</td>
+			            <td class="center">1995/11 M.6</td>
+			            <td class="center">U-thong</td>
+			            <td class="center">Suphanburi</td>
+			            <td class="center">72160</td>
+			            <td>
+			            	<a href='#' class="btn red"><i class="mdi-action-delete"></i></a>
+			            </td>
+			          </tr>
+			        </tbody>
+			    </table>
+			</div>
+		</div>
+	</div>
+</section>
+
+<% end %>
+
