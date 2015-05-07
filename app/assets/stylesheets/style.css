@@ -27,6 +27,7 @@ footer.page-footer {
 }
 
 .btn {
+  margin: 8px;
   background-color: #8bc34a;
 }
 
@@ -42,6 +43,10 @@ footer.page-footer {
 
 .brand-logo {
   font-weight: 300;
+}
+
+.dropdown-content {
+  z-index: 5;
 }
 
 .input-field .prefix ~ input {
