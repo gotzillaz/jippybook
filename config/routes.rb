@@ -14,12 +14,12 @@ Rails.application.routes.draw do
     resources :member
     resources :order
     resources :category
+    resources :payment_method
   end
 
   namespace :user do
     get '/' => 'user#index'
     get '/order' => 'user#order'
-
     get '/cart' => 'user#cart'
     delete '/cart/:id(.:format)' => 'user#cart_destroy'
     get '/payment' => 'user#payment'
