@@ -1,0 +1,28 @@
+
+<% content_for :head do %>
+  <title>Admin: Member| JippyBook</title>
+<% end %>
+
+<% content_for :body do %>
+<section>
+	<div class='page-container'>
+		<div class="row">
+			<div class="col m10 offset-m2">
+				<h4>Dashboard</h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col m2">
+				<%= render template: '/admin/nav' %>
+			</div>
+			<div class="col m10">
+				Category -> Category Management <br>
+				Book Inventory -> Book Management <br>
+				Member -> Member Management <br>
+				Order -> Order Management
+			</div>
+		</div>
+	</div>
+</section>
+
+<% end %>
