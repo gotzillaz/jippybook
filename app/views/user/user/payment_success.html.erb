@@ -1,0 +1,63 @@
+
+<% content_for :head do %>
+  <title>Success | JippyBook</title>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <div class='parallax-container'>
+      <div class='parallax'>
+        <img src='https://d13yacurqjgara.cloudfront.net/users/501233/screenshots/1833854/attachments/305595/bookstore2.jpg'>
+      </div>
+    </div>
+    <div class='page-container'>
+      <div class='card-section white'>
+        <h4>Payment Success</h4>
+        <div class='row'>
+          <div class='col m3 input-field right-align'>
+            <b>Order ID</b>
+          </div>
+          <div class='col m9 input-field'>
+            #113
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col m3 input-field right-align'>
+            <b>Full Name</b>
+          </div>
+          <div class='col m9 input-field'>
+            Tanitphon Paniwan
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col m3 input-field right-align'>
+            <b>Address</b>
+          </div>
+          <div class='col m9 input-field'>
+            1995/11 M.6 Uthon, Supanbury 72160
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col m3 input-field right-align'>
+            <b>Payment Method</b>
+          </div>
+          <div class='col m9 input-field'>
+            Krungsri Banking Kasetsart University
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col m12 input-field right-align'>
+            <a class='right waves-effect waves-light btn'>Report</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    $(function () {
+      $('.parallax').parallax();
+      $('select').material_select();
+    });
+  </script>
+<% end %>
