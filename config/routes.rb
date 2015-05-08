@@ -36,10 +36,10 @@ Rails.application.routes.draw do
   end
 
 
-  namespace :login do
-    get '/z' => 'login#index'
-    post '/z' => 'login#authenticate'
-  end
+#  namespace :login do
+#    get '/z' => 'login#index'
+#    post '/z' => 'login#authenticate'
+#  end
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'

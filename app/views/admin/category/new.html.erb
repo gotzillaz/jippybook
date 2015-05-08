@@ -16,19 +16,22 @@
 			<div class="col m2">
 				<%= render template: '/admin/nav' %>
 			</div>
+            <% if @category.errors.any? %>
+                <h5> Error </h5>
+                    <li><%= @category.errors.messages[:name] %></li>
+            <% end %>
 			<div class="col m7 offset-m1">
-				<form action='#' class="col m12">
+                <%= form_for(:category, url: '/admin/category' ,:html=>{:class => 'col m12'}) do |f| %>
 
 					<div class="row">
 				        <div class="input-field col m12">
-				          <input placeholder="" id="category_name" type="text" class="validate">
+				          <input placeholder="" id="category_name" type="text" class="validate" name='category_name'>
 				          <label for="category_name">Category Name</label>
 				          <button class="btn" name="">Create</button>  
 				        </div>
 				    </div>
 
-				          
-				</form>
+			    <% end %>	          
 			</div>
 		</div>
 	</div>
