@@ -1,5 +1,7 @@
 class Admin::CategoryController < ApplicationController
 	def index
+    @category_list = Category.all()
+    p @category_list
 	end
   
   def create 
