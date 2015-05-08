@@ -4,14 +4,16 @@ class Admin::InventoryController < ApplicationController
   end
 
   def create
+    p "ggg"
     @book = Book.new do |b|
-      b.name = params[:book][:name]
-      b.description = params[:book][:description]
-      b.img = params[:book][:img]
-      b.img = params[:book][:price]
+      b.name = params[:book_name]
+      b.description = params[:description]
+      b.img = params[:book_cover]
+      b.price = params[:price]
+      b.category_id = params[:category_id]
     end
     @book.save
-    render 'new' 
+    redirect_to '/admin/inventory'
   end
 
   def new

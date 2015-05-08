@@ -31,16 +31,18 @@
 			        </thead>
 			        <tbody>
 			          <tr>
-			            <td><img class="responsive-img" src='http://img1.wikia.nocookie.net/__cb20070927074347/harrypotter/images/1/15/Hp7.jpg'></td>
-			            <td class="center">1</td>
-			            <td class="center">Novel</td>
-			            <td class="center">Harry Potter</td>
-			            <td>The novel about sex</td>
-			            <td class="center">5000</td>
-			            <td>
-			            	<a href='/admin/inventory/12/edit' class="btn"><i class="mdi-content-create"></i></a>
-			            	<a href='#' class="btn red"><i class="mdi-action-delete"></i></a>
-			            </td>
+                        <% @book.each do |b| %>
+			              <td><img class="responsive-img" src='<%= b.img %>'></td>
+			              <td class="center"><%= b.id %></td>
+			              <td class="center"><%= Category.find(b.category_id).name %></td>
+			              <td class="center"><%= b.name %></td>
+			              <td><%= b.description %></td>
+			              <td class="center"><%= b.price %></td>
+			              <td>
+			            	<a href='/admin/inventory/<%= b.id %>/edit' class="btn"><i class="mdi-content-create"></i></a>
+			                <a href='#' class="btn red"><i class="mdi-action-delete"></i></a>
+			              </td>
+                        <% end %>
 			          </tr>
 			        </tbody>
 			    </table>
