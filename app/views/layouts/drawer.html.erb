@@ -1,14 +1,19 @@
 <ul id='drawer-nav' class='side-nav'>
-  <li class='avatar'><a href=''><img src='http://goo.gl/35SOvU'></a></li>
-  <li class='hide-on-large-only'><a href=''>Home</a></li>
+  <li class='avatar'><a href='/user'><img src='http://goo.gl/35SOvU'></a></li>
+  <li><a href='/user'><%= current_user.username %></a></li>
+  <li class='hide-on-large-only'><a href='/'>Home</a></li>
   <li class='hide-on-large-only'>
     <a data-activates='category-side-dropdown' class='dropdown-button'>Category</a>
     <ul id='category-side-dropdown' class='dropdown-content'>
-      <li><a href=''>Fantasy</a></li>
-      <li><a href=''>Crime</a></li>
-      <li><a href=''>Action</a></li>
+      <li><a href='#food'>Food</a></li>
+      <li><a href='#business'>Business</a></li>
+      <li><a href='#education'>Education</a></li>
+      <li><a href='#trend'>Trend</a></li>
+      <li><a href='#other'>Other</a></li>
     </ul>
   </li>
-  <li><a href=''>Profile</a></li>
-  <li><a href=''>Order</a></li>
+  <li><a href='/user/order'>Order</a></li>
+  <li><a href='/user/cart'>Cart</a></li>
+  <li><a href='/user/report'>Report</a></li>
+  <li><a href='/logout'>Logout</a></li>
 </ul>
