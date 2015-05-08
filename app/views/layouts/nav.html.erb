@@ -1,18 +1,20 @@
 <nav>
   <div class='scroll-nav light-green'>
     <div class='nav-wrapper'>
-      <a href='' class='brand-logo'>JippyBook</a>
+      <a href='/' class='brand-logo'>JippyBook</a>
       <div class='hide-on-large-only'>
         <a data-activates='drawer-nav' class='drawer-collapse'><i class='mdi-navigation-menu'></i></a>
       </div>
       <ul id='nav-mobile' class='right hide-on-med-and-down'>
-        <li><a href=''>Home</a></li>
+        <li><a href='/'>Home</a></li>
         <li>
           <a data-activates='category-dropdown' class='dropdown-button'>Category</a>
           <ul id='category-dropdown' class='dropdown-content'>
-            <li><a href=''>Fantasy</a></li>
-            <li><a href=''>Crime</a></li>
-            <li><a href=''>Action</a></li>
+            <li><a href='#food'>Food</a></li>
+            <li><a href='#business'>Business</a></li>
+            <li><a href='#education'>Education</a></li>
+            <li><a href='#trend'>Trend</a></li>
+            <li><a href='#other'>Other</a></li>
           </ul>
         </li>
         <li><a data-activates='drawer-nav' class='drawer-collapse'>Profile</a></li>
@@ -25,8 +27,12 @@
       <input type='text' placeholder='Find your books now!'>
     </div>
   </div>
-  
-  <%= render template: '/layouts/drawer' %>
+
+  <% if logged_in? %>
+    <%= render template: '/layouts/drawer' %>
+  <% else %>
+    <%= render template: '/layouts/drawer_login' %>
+  <% end %>
 
 </nav>
 
