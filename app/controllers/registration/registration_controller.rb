@@ -14,6 +14,7 @@ class Registration::RegistrationController < ApplicationController
       u.email = reg_user['email']
     end
     if @user.save
+      log_in @user
       redirect_to '/'
     else
       p "Failed"
