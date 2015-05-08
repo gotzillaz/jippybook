@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150506093815) do
+ActiveRecord::Schema.define(version: 20150508152831) do
 
   create_table "addresses", force: :cascade do |t|
     t.text     "address",                 null: false
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20150506093815) do
     t.integer  "category_id", null: false
     t.text     "name",        null: false
     t.text     "description", null: false
-    t.binary   "img",         null: false
+    t.text     "img",         null: false
     t.float    "price",       null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
